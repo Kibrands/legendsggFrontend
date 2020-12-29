@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-index',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
-  constructor() { }
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use(localStorage.getItem('client-lang'));
+  }
 }

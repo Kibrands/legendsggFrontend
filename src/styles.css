@@ -1,2 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
+
+.bg-main {
+    background-color: #b30000;
+}
+
+.form-check-input:checked {
+    background-color: #b30000;
+    border-color: #b30000;
+}

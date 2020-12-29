@@ -1,1 +1,67 @@
-Menu # TODO
+<nav class="navbar navbar-expand-lg navbar-dark bg-main">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+            aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">Legends GG</a>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">{{ "menu.index" | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button type="button" class="btn btn-outline-main" data-bs-toggle="modal"
+                    data-bs-target="#languageModal">
+                    <fa-icon [icon]="faGlobeEurope"></fa-icon> {{ "menu.language" | translate }}
+                </button>
+                <div class="modal" id="languageModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content no-radius">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">{{ "menu.modal.title" | translate }}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="language" id="en"
+                                                value="en">
+                                            <label class="form-check-label" for="en">
+                                                {{ "menu.modal.en" | translate }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="language" id="es"
+                                                value="es">
+                                            <label class="form-check-label" for="es">
+                                                {{ "menu.modal.es" | translate }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary no-radius" data-bs-dismiss="modal">{{
+                                    "menu.modal.close" | translate }}</button>
+                                <button type="button" id="saveLang" class="btn btn-main no-radius">{{ "menu.modal.save"
+                                    | translate }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>

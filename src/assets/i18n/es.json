@@ -1,0 +1,17 @@
+{
+    "menu": {
+        "index": "Inicio",
+        "language": "Español",
+        "modal":  {
+            "title": "Idioma",
+            "close": "Cerrar",
+            "save": "Guardar",
+            "en": "Inglés",
+            "es": "Español"
+        }
+    },
+    "index": {
+        "title": "Demo traducción",
+        "text": "Texto de ejemplo"
+    }
+}

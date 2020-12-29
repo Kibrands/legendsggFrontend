@@ -1,0 +1,35 @@
+.btn-outline-main {
+    border: 1px solid white;
+    background: 0;
+    color: white;
+    border-radius: 0;
+}
+
+.btn-outline-main:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: #b30000;
+}
+
+.btn-outline-main:focus {
+    box-shadow: 0 0 0 0.25rem rgba(148, 9, 9, 0.25);
+}
+
+.btn-main {
+    border: 0;
+    background: #b30000;
+    color: white;
+    border-radius: 0;
+}
+
+.btn-main:hover {
+    background: #880000;
+}
+
+.btn-main:focus {
+    box-shadow: 0 0 0 0.25rem rgba(148, 9, 9, 0.25);
+}
+
+.no-radius {
+    border-radius: 0;
+}

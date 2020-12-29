@@ -1,0 +1,17 @@
+{
+    "menu": {
+        "index": "Home",
+        "language": "English",
+        "modal":  {
+            "title": "Language",
+            "close": "Close",
+            "save": "Save",
+            "en": "English",
+            "es": "Spanish"
+        }
+    },
+    "index": {
+        "title": "Translation demo",
+        "text": "Example text"
+    }
+}
