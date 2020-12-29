@@ -1,4 +1,6 @@
 @import '~bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 .bg-main {
     background-color: #b30000;
@@ -7,4 +9,8 @@
 .form-check-input:checked {
     background-color: #b30000;
     border-color: #b30000;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
 }

@@ -4,17 +4,14 @@
             aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/">Legends GG</a>
+        <a class="navbar-brand brand-name" href="/">Legends GG</a>
         <div class="collapse navbar-collapse" id="menu">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">{{ "menu.index" | translate }}</a>
+                    <a class="nav-link active" aria-current="page" href="/">{{ "menu.index" | translate }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -53,10 +50,12 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary no-radius" data-bs-dismiss="modal">{{
-                                    "menu.modal.close" | translate }}</button>
-                                <button type="button" id="saveLang" class="btn btn-main no-radius">{{ "menu.modal.save"
-                                    | translate }}</button>
+                                <button type="button" class="btn btn-secondary no-radius" data-bs-dismiss="modal">
+                                    {{ "menu.modal.close" | translate }}
+                                </button>
+                                <button type="button" id="saveLang" class="btn btn-main no-radius">
+                                    {{ "menu.modal.save" | translate }}
+                                </button>
                             </div>
                         </div>
                     </div>
