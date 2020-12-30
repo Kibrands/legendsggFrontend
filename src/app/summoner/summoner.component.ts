@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 import * as jQuery from 'jquery';
 
+interface Summoner {
+  server: string;
+  name: string;
+}
 
 @Component({
   selector: 'app-summoner',
@@ -11,8 +16,9 @@ import * as jQuery from 'jquery';
 })
 export class SummonerComponent implements OnInit {
   summoner: { server: string, name: string };
+  summoner$: Summoner
 
-  constructor(private route: ActivatedRoute, translate: TranslateService) {
+  constructor(private route: ActivatedRoute, translate: TranslateService, private http: HttpClient) {
     translate.setDefaultLang('en');
     translate.use(localStorage.getItem('client-lang'));
   }
@@ -28,10 +34,14 @@ export class SummonerComponent implements OnInit {
         this.summoner.name = params.name;
       }
     );
-    fetch('https://datagg.herokuapp.com/summoner/' + this.summoner.server + "/" + this.summoner.name)
-      .then(response => response.json())
-      .then(summoner => function () {
-        jQuery('#data').html("<p>" + summoner.server + " - " + summoner.name + "</p>");
+    this.http.get<Summoner>('https://datagg.herokuapp.com/summoner/' + this.summoner.server + "/" + this.summoner.name)
+      .subscribe(data => {
+        this.summoner$ = data;
+        this.printSummoner();
       });
+  }
+
+  printSummoner(): void {
+    jQuery('#data').html('<p>' + this.summoner$.server.toUpperCase() + " - " + this.summoner$.name.toUpperCase() + '</p>');
   }
 }
