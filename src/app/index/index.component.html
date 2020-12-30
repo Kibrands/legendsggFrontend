@@ -1,3 +1,19 @@
 <div class="text-center pt-4">
-    <h1>{{ 'index.text' | translate }}</h1>
+    <div class="card no-radius p-5">
+        <h1>{{ 'index.title' | translate }}</h1>
+        <div class="input-group my-3 px-5" id="indexForm">
+            <select class="form-select" id="server">
+                <option value="" selected>{{ 'index.server' | translate }}</option>
+                <option value="na">NA</option>
+                <option value="euw">EUW</option>
+                <option value="eune">EUNE</option>
+                <option value="kr">KOREA</option>
+            </select>
+            <input type="text" class="form-control" placeholder="{{ 'index.summoner' | translate }}"
+                id="summoner" aria-label="Summoner" aria-describedby="server">
+        </div>
+        <div class="d-grid px-5">
+            <button class="btn btn-main" id="searchSummoner">{{ "index.search" | translate }}</button>
+        </div>
+    </div>
 </div>

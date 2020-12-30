@@ -5,7 +5,7 @@ import { SummonerComponent } from './summoner/summoner.component';
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
-  { path: 'summoner', component: SummonerComponent }
+  { path: 'summoner/:server/:name', component: SummonerComponent }
 ];
 
 @NgModule({

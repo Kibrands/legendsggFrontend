@@ -11,7 +11,12 @@
         }
     },
     "index": {
-        "title": "Demo traducción",
-        "text": "Texto de ejemplo"
+        "title": "Busca un invocador",
+        "server": "Servidor",
+        "summoner": "Invocador",
+        "search": "Buscar"
+    },
+    "summoner": {
+        "title": "Estamos trabajando en ello... Vuelve pronto"
     }
 }
