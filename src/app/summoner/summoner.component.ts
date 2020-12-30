@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import * as jQuery from 'jquery';
+
 
 @Component({
   selector: 'app-summoner',
@@ -8,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./summoner.component.css']
 })
 export class SummonerComponent implements OnInit {
-  summoner: {server: string, name: string};
+  summoner: { server: string, name: string };
 
   constructor(private route: ActivatedRoute, translate: TranslateService) {
     translate.setDefaultLang('en');
@@ -26,6 +28,10 @@ export class SummonerComponent implements OnInit {
         this.summoner.name = params.name;
       }
     );
+    fetch('https://datagg.herokuapp.com/summoner/' + this.summoner.server + "/" + this.summoner.name)
+      .then(response => response.json())
+      .then(summoner => function () {
+        jQuery('#data').html("<p>" + summoner.server + " - " + summoner.name + "</p>");
+      });
   }
-
 }
