@@ -15,9 +15,19 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
     jQuery('#searchSummoner').click(function () {
+      goToSummoner();
+    });
+    jQuery('#summoner').on("keyup", function(e) {
+      if (e.keyCode == 13) {
+        goToSummoner();
+      }
+    });
+
+    
+    function goToSummoner() {
       if (jQuery('#server').val() != "") {
         location.href = "/summoner/" + jQuery('#server').val().toLowerCase() + "/" + jQuery('#summoner').val().toLowerCase();
       }
-    });
+    }
   }
 }

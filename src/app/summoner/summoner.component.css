@@ -1,0 +1,33 @@
+#profileIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.profileIcon {
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+#profileIconBorder {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 200px;
+    height: 200px;
+}
+
+#summonerLevel {
+    font-weight: bolder;
+    color: orange;
+    position: absolute;
+    text-align: center;
+    width: 120px;
+    top: 110px;
+    z-index: 1;
+}
+
+.profileIconContainer {
+    position: absolute;
+}

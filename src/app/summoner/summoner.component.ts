@@ -4,10 +4,19 @@ import { TranslateService } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import * as jQuery from 'jquery';
 import { Title } from '@angular/platform-browser';
+import { environment } from './../../environments/environment';
 
 interface Summoner {
-  server: string;
-  name: string;
+  summoner: {
+    accountId: string,
+    id: string,
+    puuid: string,
+    name: string,
+    profileIconId: number,
+    revisionDate: number,
+    summonerLevel: number
+  },
+  leagueEntries: []
 }
 
 @Component({
@@ -17,7 +26,8 @@ interface Summoner {
 })
 export class SummonerComponent implements OnInit {
   summoner: { server: string, name: string };
-  summoner$: Summoner
+  summonerModel: Summoner;
+  public env = environment;
 
   constructor(private route: ActivatedRoute, translate: TranslateService
     , private http: HttpClient, private titleService: Title) {
@@ -37,15 +47,10 @@ export class SummonerComponent implements OnInit {
       }
     );
     this.setTitle('Legends GG - ' + this.summoner.name.toUpperCase() + " (" + this.summoner.server.toUpperCase() + ")");
-    this.http.get<Summoner>('https://datagg.herokuapp.com/summoner/' + this.summoner.server + "/" + this.summoner.name)
+    this.http.get<Summoner>(environment.api_url + this.summoner.server + "/" + this.summoner.name)
       .subscribe(data => {
-        this.summoner$ = data;
-        this.printSummoner();
+        this.summonerModel = data;
       });
-  }
-
-  printSummoner(): void {
-    jQuery('#data').html('<p>' + this.summoner$.server.toUpperCase() + " - " + this.summoner$.name.toUpperCase() + '</p>');
   }
 
   public setTitle(newTitle: string) {

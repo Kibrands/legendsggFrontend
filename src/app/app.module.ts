@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './shared/menu.component';
 import { SummonerComponent } from './summoner/summoner.component';
 import { IndexComponent } from './index/index.component';
+import { LevelBorderConverterPipe } from './level-border-converter.pipe';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -21,7 +22,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     MenuComponent,
     IndexComponent,
-    SummonerComponent
+    SummonerComponent,
+    LevelBorderConverterPipe
   ],
   imports: [
     BrowserModule,

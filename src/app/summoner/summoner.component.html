@@ -1,5 +1,14 @@
-<div class="text-center pt-4">
-    <h1>{{ 'summoner.title' | translate }}</h1>
-    <div id="data">
+<div class="text-center pt-5">
+    <div class="row w-100">
+        <div class="col w-100">
+            <div class="profileIconContainer">
+                <div class="profileIcon">
+                    <div id="summonerLevel">{{ summonerModel?.summoner.summonerLevel }}</div>
+                    <img id="profileIconBorder" src="{{ summonerModel?.summoner.summonerLevel | levelBorderConverter }}">
+                    <img id="profileIcon" src="{{ env.data_dragon + env.dd_version + '/img/profileicon/' + summonerModel?.summoner.profileIconId }}.png">
+                </div>
+            </div>
+            <div id="data">{{ summonerModel?.summoner.name | uppercase }}</div>
+        </div>
     </div>
 </div>

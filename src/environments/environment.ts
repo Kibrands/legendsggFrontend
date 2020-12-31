@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  data_dragon: "http://ddragon.leagueoflegends.com/cdn/",
+  dd_version: "10.25.1",
+  api_url: "https://datagg.herokuapp.com/summoner/"
 };
 
 /*
