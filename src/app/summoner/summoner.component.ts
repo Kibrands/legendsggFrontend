@@ -47,7 +47,11 @@ export class SummonerComponent implements OnInit {
       }
     );
     this.setTitle('Legends GG - ' + this.summoner.name.toUpperCase() + " (" + this.summoner.server.toUpperCase() + ")");
-    this.http.get<Summoner>(environment.api_url + this.summoner.server + "/" + this.summoner.name)
+    this.http.get<Summoner>(environment.api_url + this.summoner.server + "/" + this.summoner.name, {
+        params : {
+          legendsgg: btoa(this.summoner.server + this.summoner.name)
+        }
+      })
       .subscribe(data => {
         this.summonerModel = data;
       });

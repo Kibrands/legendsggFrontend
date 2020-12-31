@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
   <meta charset="utf-8">
   <title>Legends GG</title>
@@ -7,7 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 </head>
-<body>
+<body class="h-100 d-flex flex-column">
   <app-root></app-root>
+  <footer class="footer mt-auto py-3 bg-light" style="bottom: 0;">
+    <div class="container" wfd-id="0">
+      <span class="text-muted" wfd-id="1">
+        Legends GG © <span id="year"></span> | Legends GG isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+      </span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').innerText = (new Date).getFullYear();
+  </script>
 </body>
 </html>
