@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Rajt",
+        "language": "Magyar",
+        "modal":  {
+            "title": "Nyelv",
+            "close": "Bezárás",
+            "save": "megment",
+            "en": "angol",
+            "es": "spanyol",
+            "de": "német",
+            "cs": "cseh",
+            "el": "görög",
+            "pl": "fényesít",
+            "ro": "román",
+            "hu": "Magyar",
+            "it": "olasz",
+            "fr": "Francia",
+            "ja": "japán",
+            "ko": "koreai",
+            "pt": "portugál",
+            "ru": "orosz",
+            "tr": "török",
+            "th": "Thai",
+            "vn": "vietnami",
+            "id": "indonéz",
+            "zh": "kínai"
+        }
+    },
+    "index": {
+        "title": "Idézõ keresése",
+        "server": "szerver",
+        "summoner": "Idéző",
+        "search": "Keres"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

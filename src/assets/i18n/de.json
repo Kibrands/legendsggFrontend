@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Startseite",
+        "language": "Deutsch",
+        "modal":  {
+            "title": "Sprache",
+            "close": "Schließen",
+            "save": "Speichern",
+            "en": "Englisch",
+            "es": "Spanisch",
+            "de": "Deutsch",
+            "cs": "Tschechisch",
+            "el": "Griechisch",
+            "pl": "Polnisch",
+            "ro": "Rumänisch",
+            "hu": "Ungarisch",
+            "it": "Italienisch",
+            "fr": "Französisch",
+            "ja": "Japanisch",
+            "ko": "Koreanisch",
+            "pt": "Portugiesisch",
+            "ru": "Russisch",
+            "tr": "Türkisch",
+            "th": "Thailändisch",
+            "vn": "Vietnamesisch",
+            "id": "Indonesisch",
+            "zh": "Chinesisch"
+        }
+    },
+    "index": {
+        "title": "Finden Sie einen Beschwörer",
+        "server": "Server",
+        "summoner": "Beschwörer",
+        "search": "Finden"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

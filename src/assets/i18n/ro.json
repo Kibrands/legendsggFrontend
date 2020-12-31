@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "start",
+        "language": "Română",
+        "modal":  {
+            "title": "Limba",
+            "close": "Închide",
+            "save": "Salvați",
+            "en": "Engleză",
+            "es": "Spaniolă",
+            "de": "limba germana",
+            "cs": "ceh",
+            "el": "Greacă",
+            "pl": "Lustrui",
+            "ro": "Română",
+            "hu": "Maghiară",
+            "it": "Italiană",
+            "fr": "limba franceza",
+            "ja": "japonez",
+            "ko": "coreeană",
+            "pt": "Portugheză",
+            "ru": "Rusă",
+            "tr": "turc",
+            "th": "Thai",
+            "vn": "Vietnameză",
+            "id": "Indoneziană",
+            "zh": "chinez"
+        }
+    },
+    "index": {
+        "title": "Căutați un convocator",
+        "server": "Server",
+        "summoner": "Invocator",
+        "search": "Cauta"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

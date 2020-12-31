@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Domů",
+        "language": "Čeština",
+        "modal":  {
+            "title": "Jazyk",
+            "close": "Zavřete",
+            "save": "Uložit",
+            "en": "Angličtina",
+            "es": "Španělština",
+            "de": "Němčina",
+            "cs": "Čeština",
+            "el": "Řečtina",
+            "pl": "Polština",
+            "ro": "Rumunština",
+            "hu": "Maďarština",
+            "it": "Italština",
+            "fr": "Francouzština",
+            "ja": "Japonština",
+            "ko": "Korejština",
+            "pt": "Portugalština",
+            "ru": "Ruština",
+            "tr": "Turečtina",
+            "th": "Thajština",
+            "vn": "Vietnamština",
+            "id": "Indonéština",
+            "zh": "Čínština"
+        }
+    },
+    "index": {
+        "title": "Podívejte se na vyvolávače",
+        "server": "Server",
+        "summoner": "Summoner",
+        "search": "Zjistit"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

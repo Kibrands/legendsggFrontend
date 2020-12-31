@@ -7,7 +7,24 @@
             "close": "Close",
             "save": "Save",
             "en": "English",
-            "es": "Spanish"
+            "es": "Spanish",
+            "de": "German",
+            "cs": "Czech",
+            "el": "Greek",
+            "pl": "Polish",
+            "ro": "Romanian",
+            "hu": "Hungarian",
+            "it": "Italian",
+            "fr": "French",
+            "ja": "Japanese",
+            "ko": "Korean",
+            "pt": "Portuguese",
+            "ru": "Russian",
+            "tr": "Turkish",
+            "th": "Thai",
+            "vn": "Vietnamese",
+            "id": "Indonesian",
+            "zh": "Chinese"
         }
     },
     "index": {

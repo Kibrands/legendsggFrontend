@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Dom",
+        "language": "Polskie",
+        "modal":  {
+            "title": "Język",
+            "close": "Blisko",
+            "save": "zapisać",
+            "en": "język angielski",
+            "es": "hiszpański",
+            "de": "Niemiecki",
+            "cs": "Czech",
+            "el": "grecki",
+            "pl": "Polskie",
+            "ro": "rumuński",
+            "hu": "język węgierski",
+            "it": "Włoski",
+            "fr": "Francuski",
+            "ja": "język japoński",
+            "ko": "Coreano",
+            "pt": "koreański",
+            "ru": "Rosyjski",
+            "tr": "turecki",
+            "th": "tajski",
+            "vn": "wietnamski",
+            "id": "indonezyjski",
+            "zh": "chiński"
+        }
+    },
+    "index": {
+        "title": "Poszukaj przywoływacza",
+        "server": "serwer",
+        "summoner": "Przywoływacz",
+        "search": "Szukać"
+    },
+    "summoner": {
+        "title": ""
+    }
+}
