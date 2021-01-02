@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Mulailah",
+        "language": "Bahasa Indonesia",
+        "modal":  {
+            "title": "Bahasa",
+            "close": "Menutup",
+            "save": "Menyimpan",
+            "en": "Inggris",
+            "es": "Orang Spanyol",
+            "de": "Jerman",
+            "cs": "Ceko",
+            "el": "Yunani",
+            "pl": "Polandia",
+            "ro": "Rumania",
+            "hu": "Hongaria",
+            "it": "Italia",
+            "fr": "Perancis",
+            "ja": "Jepang",
+            "ko": "Korea",
+            "pt": "Portugis",
+            "ru": "Rusia",
+            "tr": "Turki",
+            "th": "Thai",
+            "vn": "Orang Vietnam",
+            "id": "Bahasa Indonesia",
+            "zh": "Cina"
+        }
+    },
+    "index": {
+        "title": "Cari summoner",
+        "server": "Server",
+        "summoner": "Summoner",
+        "search": "Mencari"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

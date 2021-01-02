@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Khởi đầu",
+        "language": "Tiếng Việt",
+        "modal":  {
+            "title": "Ngôn ngữ",
+            "close": "Đóng",
+            "save": "Tiết kiệm",
+            "en": "Tiếng Anh",
+            "es": "Người Tây Ban Nha",
+            "de": "Tiếng Đức",
+            "cs": "Tiếng Séc",
+            "el": "Người Hy Lạp",
+            "pl": "Đánh bóng",
+            "ro": "Tiếng Rumani",
+            "hu": "Người Hungary",
+            "it": "Người Ý",
+            "fr": "Người Pháp",
+            "ja": "Tiếng Nhật",
+            "ko": "Hàn Quốc",
+            "pt": "Người Bồ Đào Nha",
+            "ru": "Tiếng Nga",
+            "tr": "Thổ nhĩ kỳ",
+            "th": "Thái",
+            "vn": "Tiếng Việt",
+            "id": "Người Indonesia",
+            "zh": "Người Trung Quốc"
+        }
+    },
+    "index": {
+        "title": "Tìm kiếm người triệu hồi",
+        "server": "Người phục vụ",
+        "summoner": "Người triệu hồi",
+        "search": "Tìm kiếm"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

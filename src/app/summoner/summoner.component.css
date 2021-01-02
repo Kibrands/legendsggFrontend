@@ -31,3 +31,9 @@
 .profileIconContainer {
     position: absolute;
 }
+
+#data {
+    text-align: left;
+    padding-left: 150px;
+    font-size: 1.1rem;
+}

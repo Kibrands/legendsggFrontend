@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit {
 
     
     function goToSummoner() {
-      if (jQuery('#server').val() != "") {
+      if (jQuery('#server').val() != "" && jQuery('#summoner').val() != "") {
         location.href = "/summoner/" + jQuery('#server').val().toLowerCase() + "/" + jQuery('#summoner').val().toLowerCase();
       }
     }

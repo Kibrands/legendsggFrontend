@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Başlat",
+        "language": "Türk",
+        "modal":  {
+            "title": "Dil",
+            "close": "Kapat",
+            "save": "Kayıt etmek",
+            "en": "Ingilizce",
+            "es": "İspanyol",
+            "de": "Almanca",
+            "cs": "Çek",
+            "el": "Yunan",
+            "pl": "Lehçe",
+            "ro": "Romence",
+            "hu": "Macarca",
+            "it": "İtalyan",
+            "fr": "Fransızca",
+            "ja": "Japonca",
+            "ko": "Koreli",
+            "pt": "Portekizce",
+            "ru": "Rusça",
+            "tr": "Türk",
+            "th": "Tay dili",
+            "vn": "Vietnam",
+            "id": "Endonezya dili",
+            "zh": "Çince"
+        }
+    },
+    "index": {
+        "title": "Bir sihirdar ara",
+        "server": "Sunucu",
+        "summoner": "Sihirdar",
+        "search": "Aramak"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

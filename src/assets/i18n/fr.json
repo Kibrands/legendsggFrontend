@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Début",
+        "language": "Français",
+        "modal":  {
+            "title": "Langage",
+            "close": "Fermer",
+            "save": "Sauvegarder",
+            "en": "Anglais",
+            "es": "Espagnol",
+            "de": "Allemand",
+            "cs": "Tchèque",
+            "el": "Grec",
+            "pl": "Polonais",
+            "ro": "Roumain",
+            "hu": "Hongrois",
+            "it": "Italien",
+            "fr": "Français",
+            "ja": "Japonais",
+            "ko": "Coréen",
+            "pt": "Portugais",
+            "ru": "Russe",
+            "tr": "Turc",
+            "th": "Thaïlandais",
+            "vn": "Vietnamien",
+            "id": "Indonésien",
+            "zh": "Chinois"
+        }
+    },
+    "index": {
+        "title": "Rechercher un invocateur",
+        "server": "Serveur",
+        "summoner": "Invocateur",
+        "search": "Chercher"
+    },
+    "summoner": {
+        "title": ""
+    }
+}

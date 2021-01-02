@@ -17,9 +17,7 @@ export class LevelBorderConverterPipe implements PipeTransform {
       res = 30;
     } else if (lvl >= 50 && lvl < 500) {
       for (let i = 50; i <= lvl; i += 25) {
-        if (i <= lvl && lvl < i + 25) {
-          res = i;
-        }
+        res = i;
       }
     } else if (lvl == null) {
       return null;

@@ -1,0 +1,39 @@
+{
+    "menu": {
+        "index": "Inizio",
+        "language": "Italiano",
+        "modal":  {
+            "title": "Linguaggio",
+            "close": "Vicino",
+            "save": "Salva",
+            "en": "Inglese",
+            "es": "Spagnolo",
+            "de": "Tedesco",
+            "cs": "Ceco",
+            "el": "Greco",
+            "pl": "Polacco",
+            "ro": "Rumeno",
+            "hu": "Ungherese",
+            "it": "Italiano",
+            "fr": "Francese",
+            "ja": "Giapponese",
+            "ko": "Coreano",
+            "pt": "Portoghese",
+            "ru": "Russo",
+            "tr": "Turco",
+            "th": "Tailandese",
+            "vn": "Vietnamita",
+            "id": "Indonesiano",
+            "zh": "Chinese"
+        }
+    },
+    "index": {
+        "title": "Cerca un evocatore",
+        "server": "Server",
+        "summoner": "Evocatore",
+        "search": "Cercare"
+    },
+    "summoner": {
+        "title": ""
+    }
+}
