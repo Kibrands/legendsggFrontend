@@ -1,9 +1,13 @@
 #server {
-    flex: 0.25 1 auto;
+  flex: 0.25 1 auto;
 }
 
 @media only screen and (max-width: 400px) {
     #indexForm {
       padding: 0!important;
     }
+}
+
+#index-img {
+  width: 500px;
 }

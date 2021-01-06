@@ -35,5 +35,8 @@
     },
     "summoner": {
         "title": ""
+    },
+    "error": {
+        "title": "Hiba: A keresett oldal nem létezik"
     }
 }

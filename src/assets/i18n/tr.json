@@ -35,5 +35,8 @@
     },
     "summoner": {
         "title": ""
+    },
+    "error": {
+        "title": "Hata: Aradığınız sayfa mevcut değil"
     }
 }

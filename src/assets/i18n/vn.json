@@ -35,5 +35,8 @@
     },
     "summoner": {
         "title": ""
+    },
+    "error": {
+        "title": "Lỗi: Trang bạn đang tìm kiếm không tồn tại"
     }
 }

@@ -35,5 +35,8 @@
     },
     "summoner": {
         "title": ""
+    },
+    "error": {
+        "title": "Błąd: strona, której szukasz, nie istnieje"
     }
 }

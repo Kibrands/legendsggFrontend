@@ -35,5 +35,8 @@
     },
     "summoner": {
         "title": ""
+    },
+    "error": {
+        "title": "Error: Halaman yang Anda cari tidak ada"
     }
 }
