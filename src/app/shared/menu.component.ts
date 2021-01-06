@@ -17,6 +17,7 @@ export class MenuComponent implements OnInit {
     translate.setDefaultLang('en');
     this.lang = localStorage.getItem('client-lang');
     translate.use(this.lang);
+    jQuery('html').attr('lang',this.lang);
   }
 
   ngOnInit() {
