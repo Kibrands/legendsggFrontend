@@ -57,6 +57,9 @@ export class SummonerComponent implements OnInit {
       })
       .subscribe(data => {
         this.summonerModel = data;
+        if (this.summonerModel.summoner == null) {
+          location.href = "/404";
+        }
       }, error => location.href = '/404');
   }
 
