@@ -1,4 +1,4 @@
-<div class="text-center pt-5">
+<div class="text-center pt-5" *ngIf="summonerModel?.summoner.name.length > 0; else loading">
     <div class="row w-100">
         <div class="col w-100">
             <div class="profileIconContainer">
@@ -8,7 +8,45 @@
                     <img id="profileIcon" src="{{ env.data_dragon + env.dd_version + '/img/profileicon/' + summonerModel?.summoner.profileIconId }}.png">
                 </div>
             </div>
-            <div id="data">{{ summonerModel?.summoner.name | uppercase }}</div>
+            <div id="data">
+                <div class="row">
+                    <div class="col-2">
+                        {{ summonerModel?.summoner.name | uppercase }}
+                    </div>
+                    <div class="col-12 col-sm-3" *ngIf="summonerModel?.leagueEntries.length == 0; else printLeagues">
+                        <img class="rankedEmblem" src="/assets/images/ranked-emblems/Emblem_Unranked.png" alt="Unranked">
+                    </div>
+                    <ng-template #printLeagues>
+                        <div class="col-12 col-sm-3 text-center d-grid" *ngFor="let leagueEntry of summonerModel?.leagueEntries">
+                            <img class="rankedEmblem m-auto" src="/assets/images/ranked-emblems/Emblem_{{ leagueEntry.tier | titlecase }}.png" alt="{{ leagueEntry.tier }}">
+                            <p>
+                                <span *ngIf="leagueEntry.queueType.split('_')[1] == 'SOLO'; else flex">SoloQ</span>
+                                <ng-template #flex>
+                                    <span *ngIf="leagueEntry.queueType.split('_')[2] == 'SR'; else tft">Flex</span>
+                                    <ng-template #tft>
+                                        <span>TFT</span>
+                                    </ng-template>
+                                </ng-template>
+                                - {{ leagueEntry.tier + ' ' + leagueEntry.rank | titlecase }}<br/>
+                                <span class="fw-bold">{{ leagueEntry.leaguePoints }} LP / 
+                                    <span class="text-success">{{ leagueEntry.wins }}V</span>
+                                    <span class="text-danger"> {{  leagueEntry.losses }}L</span>
+                                </span>
+                            </p>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="card no-radius">
+            <p class="fs-4 text-primary pt-4"><fa-icon [icon]="faTools"></fa-icon> We are developing this right now...</p>
         </div>
     </div>
 </div>
+<ng-template #loading>
+    <div class="text-center pt-5">
+        <h1>Loading...</h1>
+    </div>
+</ng-template>

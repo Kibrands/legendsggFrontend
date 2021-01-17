@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 import * as jQuery from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
+import { faTools } from '@fortawesome/free-solid-svg-icons';
+import { templateJitUrl, templateSourceUrl } from '@angular/compiler';
 
 interface Summoner {
   summoner: {
@@ -27,6 +29,7 @@ interface Summoner {
 export class SummonerComponent implements OnInit {
   summoner: { server: string, name: string };
   summonerModel: Summoner;
+  faTools = faTools;
   public env = environment;
 
   constructor(private route: ActivatedRoute, translate: TranslateService
@@ -54,7 +57,7 @@ export class SummonerComponent implements OnInit {
       })
       .subscribe(data => {
         this.summonerModel = data;
-      });
+      }, error => location.href = '/404');
   }
 
   public setTitle(newTitle: string) {
