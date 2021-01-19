@@ -4,6 +4,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ChartsModule } from 'ng2-charts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { SummonerComponent } from './summoner/summoner.component';
 import { IndexComponent } from './index/index.component';
 import { LevelBorderConverterPipe } from './level-border-converter.pipe';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { VictoryRatioDoughnutComponent } from './victory-ratio-doughnut/victory-ratio-doughnut.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -25,7 +27,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     IndexComponent,
     SummonerComponent,
     LevelBorderConverterPipe,
-    NotFoundComponent
+    NotFoundComponent,
+    VictoryRatioDoughnutComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           deps: [HttpClient]
       }
     }),
-    FontAwesomeModule
+    FontAwesomeModule,
+    ChartsModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]

@@ -26,7 +26,9 @@
     "@ngx-translate/http-loader": "^6.0.0",
     "@popperjs/core": "^2.6.0",
     "bootstrap": "^5.0.0-beta1",
+    "chart.js": "^2.9.4",
     "jquery": "^3.5.1",
+    "ng2-charts": "^2.4.2",
     "rxjs": "^6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

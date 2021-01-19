@@ -43,10 +43,23 @@
         <div class="card no-radius">
             <p class="fs-4 text-primary pt-4"><fa-icon [icon]="faTools"></fa-icon> We are developing this right now...</p>
         </div>
+        <!--
+        <div *ngIf="matchDataMap != undefined">
+            <div class="col-12 col-sm-3 text-center" *ngFor="let matchData of matchDataMap">
+                {{ matchData.match.gameId }}
+            </div>
+            <app-victory-ratio-doughnut [chartData]=winRatio></app-victory-ratio-doughnut>
+        </div>
+        -->
     </div>
 </div>
 <ng-template #loading>
     <div class="text-center pt-5">
-        <h1>Loading...</h1>
+        <h1>Loading<span class="dots-cont">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+            </span>
+        </h1>
     </div>
 </ng-template>

@@ -6,7 +6,6 @@ import * as jQuery from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { environment } from './../../environments/environment';
 import { faTools } from '@fortawesome/free-solid-svg-icons';
-import { templateJitUrl, templateSourceUrl } from '@angular/compiler';
 
 interface Summoner {
   summoner: {
@@ -21,6 +20,42 @@ interface Summoner {
   leagueEntries: []
 }
 
+interface MatchList {
+  matchList: []
+}
+
+interface MatchRef {
+  champion: number;
+  gameId: number;
+  lane: string;
+  platformId: string;
+  queue: number;
+  role: string;
+  season: number;
+  timestamp: number;
+}
+
+interface Match {
+  gameCreation: number;
+  gameDuration: number;
+  gameId: number;
+  gameMode: string;
+  gameType: string;
+  gameVersion: string;
+  mapId: number;
+  participantIdentities: Array<any>;
+  participants: Array<any>;
+  platformId: string;
+  queueId: number;
+  seasonId: number;
+  teams: Array<any>;
+}
+
+interface MatchMap {
+  matchRef: MatchRef;
+  match: Match;
+}
+
 @Component({
   selector: 'app-summoner',
   templateUrl: './summoner.component.html',
@@ -28,7 +63,12 @@ interface Summoner {
 })
 export class SummonerComponent implements OnInit {
   summoner: { server: string, name: string };
+  win: number = 60;
+  lose: number = 40;
+  winRatio: Array<any>;
   summonerModel: Summoner;
+  matchListModel: MatchList;
+  matchDataMap: Array<MatchMap> = [];
   faTools = faTools;
   public env = environment;
 
@@ -60,7 +100,48 @@ export class SummonerComponent implements OnInit {
         if (this.summonerModel.summoner == null) {
           location.href = "/404";
         }
-      }, error => location.href = '/404');
+        this.subscribeToMatchList();
+      }, error => location.href = "/404");
+  }
+
+  private subscribeToMatchList() {
+    this.http.get<MatchList>(environment.api_url + "matchlist/" + this.summoner.server + "/" + this.summonerModel.summoner.accountId, {
+      params : {
+        legendsgg: btoa(this.summoner.server + this.summonerModel.summoner.accountId)
+      }
+    })
+    .subscribe(data => {
+      this.matchListModel = data;
+      if (this.matchListModel.matchList == null) {
+        console.log("err.matchlist.not.found")
+      }
+      this.getMatchInfo();
+    });
+  }
+
+  private getMatchInfo() {
+    let count = 0;
+    this.matchListModel.matchList.forEach(matchRef => {
+      if (count < 20) {
+        this.http.get<Match>(environment.api_url + "match/" + this.summoner.server + "/" + matchRef['gameId'] + "/" + this.summonerModel.summoner.accountId, {
+          params : {
+            legendsgg: btoa(this.summoner.server + matchRef['gameId'] + this.summonerModel.summoner.accountId)
+          }
+        })
+        .subscribe(data => {
+          let matchMap = { matchRef: matchRef, match: data } as MatchMap;
+          this.matchDataMap.push(matchMap);
+          if(count == 19) {
+            setTimeout(this.calculateRatio, 500);
+          }
+        });
+      }
+      count++;
+    });
+  }
+
+  private calculateRatio() {
+    this.winRatio = [[this.lose, this.win]]
   }
 
   public setTitle(newTitle: string) {
