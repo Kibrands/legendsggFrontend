@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  data_dragon: "https://ddragon.leagueoflegends.com/cdn/",
-  dd_version: "11.1.1",
+  data_dragon: "https://ddragon.bangingheads.net/cdn/",
+  dd_version: "11.2.1",
   api_url: "https://datagg.herokuapp.com/summoner/"
 };
 
