@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   data_dragon: "https://ddragon.bangingheads.net/cdn/",
-  dd_version: "11.7.1",
+  dd_version: "11.11.1",
   api_url: "https://datagg.herokuapp.com/summoner/"
 };
 
